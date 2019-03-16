@@ -1,0 +1,182 @@
+from OpenGL.GL import *
+from OpenGL.GLUT import *
+import numpy as np
+from math import *
+
+def draw():
+    glClearColor(0,0,0,0)
+    glClear(GL_COLOR_BUFFER_BIT)
+    glColor3f(0,0,0)
+
+    glColor3f(1,1,0.1)
+    glBegin(GL_QUADS)
+    glVertex3f(0.3,-0.3,0)
+    glVertex3f(0.3,0.3,0)
+    glVertex3f(-0.3,0.3,0)
+    glVertex3f(-0.3,-0.3,0)
+    glEnd()
+
+    glColor3f(0.9,0.8,0.4)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.07, 0.3,0 )
+    glVertex3f(0.07, 0.3,0)
+    glVertex3f(0.07,0.4,0)
+    glVertex3f(-0.07,0.4,0)
+    glEnd()
+
+    glColor3f(0.9,0.8,0.7)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.05, 0.4,0 )
+    glVertex3f(0.05, 0.4,0)
+    glVertex3f(0.05,0.51,0)
+    glVertex3f(-0.05,0.51,0)
+    glEnd()
+
+    glColor3f(0,0.8,0.7)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.15, 0.51,0 )
+    glVertex3f(0.15, 0.51,0)
+    glVertex3f(0.15,0.57,0)
+    glVertex3f(-0.15,0.57,0)
+    glEnd()
+
+    glColor3f(0.9,0.9,0.9)
+    glBegin(GL_POLYGON)
+
+    for theta in np.arange(0,2*pi, 0.001):
+
+        x= 0.04*cos(theta)
+        y= 0.04*sin(theta)
+
+        glVertex(x+0.15,y+0.54)
+    glEnd()
+
+
+    glColor3f(0.9,0.9,0.9)
+    glBegin(GL_POLYGON)
+
+    for theta in np.arange(0,2*pi, 0.001):
+
+        x= 0.04*cos(theta)
+        y= 0.04*sin(theta)
+
+        glVertex(x-0.15,y+0.54)
+    glEnd()
+
+    glColor3f(0,0,0)
+    glBegin(GL_POLYGON)
+
+    for theta in np.arange(0,2*pi, 0.001):
+
+        x= 0.02*cos(theta)
+        y= 0.02*sin(theta)
+
+        glVertex(x-0.14,y+0.53)
+    glEnd()
+
+    glColor3f(0,0,0)
+    glBegin(GL_POLYGON)
+
+    for theta in np.arange(0,2*pi, 0.001):
+
+        x= 0.02*cos(theta)
+        y= 0.02*sin(theta)
+
+        glVertex(x+0.14,y+0.53)
+    glEnd()
+
+    glColor3f(0.9,0.8 ,0.9)
+    glBegin(GL_QUADS)
+    glVertex3f(0.3,-0.26,0)
+    glVertex3f(0.33,-0.26,0)
+    glVertex3f(0.3,-0.28,0)
+    glVertex3f(0.33,-0.28,0)
+    glEnd()
+
+    glColor3f(0.9,0.8 ,0.9)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.3,-0.26,0)
+    glVertex3f(-0.33,-0.26,0)
+    glVertex3f(-0.3,-0.28,0)
+    glVertex3f(-0.33,-0.28,0)
+    glEnd()
+
+    glColor3f(0.9,0.8 ,0.9)
+    glBegin(GL_QUADS)
+    glVertex3f(0.33,-0.18,0)
+    glVertex3f(0.5,-0.18,0)
+    glVertex3f(0.33,-0.36,0)
+    glVertex3f(0.5,-0.36,0)
+    glEnd()
+
+    glColor3f(0.9,0.8 ,0.9)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.33,-0.18,0)
+    glVertex3f(-0.5,-0.18,0)
+    glVertex3f(-0.33,-0.36,0)
+    glVertex3f(-0.5,-0.36,0)
+    glEnd()
+
+    glColor3f(0,0.8 ,0.7)
+    glBegin(GL_QUADS)
+    glVertex3f(0.3,0.15,0)
+    glVertex3f(0.45,0.15,0)
+    glVertex3f(0.45,0.11,0)
+    glVertex3f(0.3,0.11,0)
+    glEnd()
+
+    glColor3f(0,0.8 ,0.7)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.3,0.15,0)
+    glVertex3f(-0.45,0.15,0)
+    glVertex3f(-0.45,0.11,0)
+    glVertex3f(-0.3,0.11,0)
+    glEnd()
+
+    glColor3f(0,0.8 ,0.7)
+    glBegin(GL_QUADS)
+    glVertex3f(0.45,0.18,0)
+    glVertex3f(0.45,0.08,0)
+    glVertex3f(0.5,0.08,0)
+    glVertex3f(0.5,0.18,0)
+    glEnd()
+
+    glColor3f(0,0.8 ,0.7)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.45,0.18,0)
+    glVertex3f(-0.45,0.08,0)
+    glVertex3f(-0.5,0.08,0)
+    glVertex3f(-0.5,0.18,0)
+    glEnd()
+
+    glColor3f(1,0,0)
+    glBegin(GL_TRIANGLES)
+    glVertex(0.04,0.3)
+    glVertex(-0.04,0.3)
+    glVertex(0,0.24)
+    glEnd()
+    glColor3f(1,0 ,0)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.04, 0.24,0 )
+    glVertex3f(0.04, 0.24,0)
+    glVertex3f(0.04,0.22,0)
+    glVertex3f(-0.04,0.22,0)
+    glEnd()
+    glColor3f(1,0 ,0)
+    glBegin(GL_QUADS)
+    glVertex3f(-0.03, 0.22,0 )
+    glVertex3f(0.03, 0.22,0)
+    glVertex3f(0.03,0,0)
+    glVertex3f(-0.03,0,0)
+    glEnd()
+
+
+
+    glFlush()
+
+glutInit()
+glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
+glutInitWindowSize(500, 500)
+glutCreateWindow(b"First OpenGL Project")
+glutDisplayFunc(draw)
+glutMainLoop()
